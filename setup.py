@@ -33,7 +33,7 @@ class build_ext_subclass(build_ext):
             # Check if build is with OpenMP 
             if use_omp:
                 extra_compile_args = ['-std=c99', '-O3', '-fopenmp']
-                extra_link_args=['-lgomp']
+                extra_link_args=['-liomp5']
             else:
                 extra_compile_args = ['-std=c99', '-O3']
                 extra_link_args = []
